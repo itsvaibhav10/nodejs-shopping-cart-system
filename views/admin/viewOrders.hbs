@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col m8 offset-m2 teal lighten-1 " style="border:#000000 solid 10px ; margin-top: 5px;">
+        <h1 class="center hero">User Profile</h1>
+        <h2 class="">My Orders</h2>
+        <br>
+        {{# each orders}}
+        <div class="card">
+            <div class="card-content">
+                <ul class="collection">
+                    {{# each this.items}}
+                    <li class="collection-item">
+                        Title: {{this.item.title}} <br> Quantity: {{this.qty}}
+                        Units
+                        <span class="badge badge-pill badge-secondary float-right">{{this.price}}</span>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="card-action">
+                <strong>Total Price: ${{this.cart.totalPrice}}</strong>
+            </div>
+        </div>
+        <br>
+        {{/each}}
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+
+    <form action="/admin/addProduct" method="POST" enctype="multipart/form-data">
+        {{!-- File Input --}}
+        <div class="file-field input-field">
+            <div class="btn teal">
+                <span>File</span>
+                <input type="file" name="pro_image" required>
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+        </div>
+        {{!-- Title Of Image --}}
+        <div class="input-field tooltipped" data-position="left" data-tooltip="Enter Title Here">
+            <input id="pro_title" name="pro_title" type="text" class="validate" required>
+            <label for="pro_title">Title For The Product</label>
+        </div>
+        {{!-- Price Of Image --}}
+        <div class="input-field tooltipped" data-position="left" data-tooltip="Enter Price Here">
+            <input id="pro_price" name="pro_price" type="number" class="validate" required>
+            <label for="pro_price">Price For The Product</label>
+        </div>
+        {{!-- Description Of Image --}}
+        <div class="input-field tooltipped" data-position="left" data-tooltip="Enter Descripton Here">
+            <textarea id="pro_description" name="pro_description" class="materialize-textarea" required></textarea>
+            <label for="pro_description">Description For The Product</label>
+        </div>
+
+        <button type="submit" class="btn waves-effect teal "><i class="material-icons left ">add_circle_outline</i>Add
+            Product</button>
+    </form>
+</div>

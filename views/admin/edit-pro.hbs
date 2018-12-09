@@ -1,0 +1,22 @@
+<div class="container">
+    <br>
+    <form action="/admin/edit-pro/{{products._id}}" method="POST">
+        {{!-- Title Of Image --}}
+        <div class="input-field tooltipped" data-position="left" data-tooltip="Enter Title Here">
+            <input id="pro_title" name="pro_title" type="text" class="validate" value="{{products.title}}" required>
+            <label for="pro_title">Title For The Product</label>
+        </div>
+        {{!-- Price Of Image --}}
+        <div class="input-field tooltipped" data-position="left" data-tooltip="Enter Price Here">
+            <input id="pro_price" name="pro_price" type="number" class="validate" value="{{products.price}}" required>
+            <label for="pro_price">Price For The Product</label>
+        </div>
+        {{!-- Description Of Image --}}
+        <div class="input-field tooltipped" data-position="left" data-tooltip="Enter Descripton Here">
+            <textarea id="pro_description" name="pro_description" class="materialize-textarea" required>{{products.description}}</textarea>
+            <label for="pro_description">Description For The Product</label>
+        </div>
+
+        <button type="submit" class="btn waves-effect teal "><i class="material-icons left ">edit</i>Finish</button>
+    </form>
+</div>

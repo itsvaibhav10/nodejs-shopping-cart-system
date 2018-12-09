@@ -1,0 +1,22 @@
+{{# each products}}
+<div class="row">
+    {{# each this}}
+    <div class="col l3 m4 s12">
+        <div class="card hoverable  white-text teal darken-3 " style="border: solid black 1px;">
+            <div class="card-image">
+                <img src="{{this.imagePath}}" class="">
+                <span class="card-title black-text">{{this.title}}</span>
+            </div>
+            <div class="card-content">
+                <p>{{this.description}}</p>
+            </div>
+            <div class="card-action center">
+                <p>ID - {{this._id}}</p>
+                <a href="/admin/edit-pro/{{this._id}}" class=" btn waves-effect waves-light amber darken-4 "><i class="material-icons right">edit</i>Edit</a>
+                <a href="/admin/del-pro/{{this._id}}" class=" btn waves-effect waves-light red accent-4"><i class="material-icons left">delete_forever</i>Delete</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/each}}

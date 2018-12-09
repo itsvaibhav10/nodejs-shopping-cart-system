@@ -1,0 +1,26 @@
+<div id="success" class="alert alert-success" {{#if noMessage}} hidden{{/if}}> <span class="center-align">{{successMsg}}
+    </span></div>
+{{# each products}}
+<div class="row">
+    {{# each this}}
+    <div class="col l3 m4 s12">
+        <div class="card hoverable large white-text indigo darken-2 " style="border: solid black 1px;">
+            <div class="card-image">
+                <img src="{{this.imagePath}}" class="responsive-img">
+                <span class="card-title black-text">{{this.title}}</span>
+            </div>
+            <div class="card-content">
+                <p>{{this.description}}</p>
+            </div>
+            <div class="card-action center">
+                <h4 class="white-text text-darken-1 ">${{this.price}}</h4>
+                <a href="/add-to-cart/{{this._id}}" class="btn indigo accent-2 waves-effect waves-light">
+                    <i class="material-icons left">add_shopping_cart</i>
+                    Add To Cart
+                </a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/each}}
