@@ -2,6 +2,10 @@
 
 Using Node,Express,MaterializeCss And MongoDb
 
+Sign UP With Your email And Password Go To MongoDb shopping>users 
+and Change The user_type from user to  admin
+now You can add Products Edit And Delete Products
+
 I used StripeJs  For The Payment Gateway 
 
 Steps To Integrate Stripejs 
